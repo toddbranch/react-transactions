@@ -1,0 +1,19 @@
+.transactions {
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-form {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.application {
+  display: flex;
+  margin: 20px;
+}
