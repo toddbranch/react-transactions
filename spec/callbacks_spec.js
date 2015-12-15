@@ -1,4 +1,4 @@
-describe('helpers', function() {
+describe('callbacks', function() {
   beforeEach(function() {
     store = Redux.createStore(reducer);
   });

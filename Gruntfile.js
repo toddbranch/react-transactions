@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     jasmine: {
       src: [
         'store.js',
-        'helpers.js'
+        'callbacks.js'
       ],
       options: {
         keepRunner: true,
