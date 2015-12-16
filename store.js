@@ -16,8 +16,7 @@ var reducer = function(state, action) {
     transactions: [],
     from: '',
     to: '',
-    amount: '',
-    sendEnabled: false
+    amount: ''
   };
 
   state = state || defaultState;
@@ -43,10 +42,6 @@ var reducer = function(state, action) {
       state.amount = action.text;
       break;
   }
-
-  state.sendEnabled = /^\d+$/.test(state.amount) &&
-    state.from.length > 0 &&
-    state.to.length > 0;
 
   return state;
 };

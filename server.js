@@ -7,7 +7,9 @@ var transactions = [
   {from: 'Jim', to: 'Dwight', amount: 200},
   {from: 'Michael', to: 'Toby', amount: 100},
   {from: 'Dwight', to: 'Michael', amount: 175},
-  {from: 'Creed', to: 'Jim', amount: 50}
+  {from: 'Creed', to: 'Jim', amount: 50},
+  {from: 'Deposit', to: 'Jim', amount: 200},
+  {from: 'Deposit', to: 'Creed', amount: 200}
 ];
 
 app.use(express.static('.'));
@@ -16,7 +18,7 @@ io.on('connection', function(socket) {
   socket.emit('transactions', transactions);
   socket.on('transaction', function(transaction) {
     transactions.unshift(transaction);
-    socket.broadcast.emit('transactions', [transaction]);
+    io.emit('transactions', [transaction]);
   });
 });
 

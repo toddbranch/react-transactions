@@ -1,9 +1,10 @@
-.transactions {
+.transactions, .balances {
   max-width: 500px;
   min-width: 300px;
+  margin-right: 20px;
 }
 
-.transaction {
+.transaction, .balance {
   display: flex;
   justify-content: space-between;
 }
